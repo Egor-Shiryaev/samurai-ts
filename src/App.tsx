@@ -1,59 +1,52 @@
 import React from 'react';
 import './App.css';
-import Accordion from "./components/Accordion/Accordion";
-import {Rating} from "./components/Rating/Rating";
-import {Header} from "./components/Header/Header";
-import {Technologies} from "./components/Technologies/Technologies";
 
 
-// function declaration - для объявления компонентов,
-// функции-компоненты объявляются с заглавной буквы
-function App() { // App желтым, так как где то используется
+function App() {
     console.log("App rendering")
-    // возвращает jsx(div)
     return (
-        <div className="App">
-            <PageTitle title={"This is APP component"}/>
-            <PageTitle title={"New friends"}/>
-            Article 1
-            <Rating value={3}/>
-            <Accordion titleVal={"Menu"} collapsed={true}/>
-            <Accordion titleVal={"Users"} collapsed={true}/>
-            Article 2
-            <Rating value={0}/>
-            <Rating value={1}/>
-            <Rating value={2}/>
-            <Rating value={3}/>
-            <Rating value={4}/>
-            <Rating value={5}/>
-            <Header/>
-            <Technologies/>
+        <div className="app-wrapper">
+            <header className='header'>
+                <img
+                    src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTtJ0BxAfV74NsYKTtj__zk4fpE0zcIXQ0rXRR-UoZsYWSLf-Pc5_eth1Bl0agDrvPuXRU&usqp=CAU"
+                    alt=""/>
+            </header>
+            <nav className='nav'>
+                {/*<div><a>Profile</a></div>*/}
+                {/*<div><a>Message</a></div>*/}
+                {/*<div><a>News</a></div>*/}
+                {/*<div><a>Music</a></div>*/}
+                {/*<div><a>Settings</a></div>*/}
+            </nav>
+            <div className='content'>
+                <div></div>
+                <img
+                    src="https://images.ctfassets.net/hrltx12pl8hq/7yQR5uJhwEkRfjwMFJ7bUK/dc52a0913e8ff8b5c276177890eb0129/offset_comp_772626-opt.jpg?fit=fill&w=800&h=300"
+                    alt=""/>
+                <div> ava + discription
+                    <img
+                        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSBA9-3gshYFwDoSerwZ-DTl5mUA0qIbP8sL9afe26eHLocJjKYcNI7-mmwnhuQ6hE-TGE&usqp=CAU"
+                        alt=""/>
+                </div>
+                <div> My post
+                    <div>
+                        New post
+                    </div>
+                    <div>
+                        <div>
+                            post 1
+                        </div>
+                        <div>
+                            post 2
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
         </div>
     );
 }
-
-type PageTitleType = {
-    title: string
-}
-
-function PageTitle(props: PageTitleType) {
-    console.log("PageTitle rendering")
-    return <h1>{props.title}</h1> // <></> - можно оборачивать в <></> если без <div>
-}
-
-// Rating не имортированли, тк она есть в этом файле
-
-
-// Стрелочные функции используем для обработчика событии
-// const App=()=> {
-//     //полезное что-то
-//     // возвращает jsx(div)
-//     return (
-//         <div className="App">
-//             this is APP co
-//         </div>
-//     );
-// }
 
 
 export default App;
