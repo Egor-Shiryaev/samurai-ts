@@ -10,22 +10,6 @@
     /*grid-gap: 10px;*/
 }
 
-.header {
-    grid-area: h;
-    background-color: aquamarine;
-}
 
-.header img {
-    width: 100px;
-}
 
-.nav {
-    grid-area: n;
-    background-color:aqua;
-}
 
-.content {
-    background-color:antiquewhite;
-
-    grid-area: c;
-}
