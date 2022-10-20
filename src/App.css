@@ -10,6 +10,11 @@
     /*grid-gap: 10px;*/
 }
 
+.app-wrapper-content {
+    background-color: antiquewhite;
+    grid-area: c;
+}
+
 
 
 
